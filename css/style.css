@@ -1,0 +1,85 @@
+:root{
+    --sizeX-border: 600px;
+    --sizeY-border: 800px;
+    --sixeX-contain: 580px;
+    --sizeY-contain: 780px;
+    --bg: #202020;
+    --dark-gray: #5a5a5a;
+    --white: #f3f3f3;
+    --white-control: #F0F0F0;
+    --white-control-inactive: #D1D1D1;
+}
+
+body{
+    background-color: #202020;
+}
+
+#music-playing-box{
+    width: var(--sizeX-border);
+    height: var(--sizeY-border);
+    margin: auto;
+}
+/*Diseño y Animación del borde gradiente*/
+.border{
+    width: var(--sizeX-border);
+    height: var(--sizeY-border);
+    background: linear-gradient(90deg, var(--dark-gray)10%, var(--white)50%, var(--dark-gray)90%);
+    border-radius: 15px;
+    display: flex;
+
+    animation-name: gradientMove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes gradientMove{
+    0%{
+        background-position: -20rem 0;
+    }
+    50%{
+        background-position: 20rem 0;
+    }
+    100%{
+        background-position: -20rem 0;
+    }
+}
+
+.contain{
+    width: var(--sixeX-contain);
+    height: var(--sizeY-contain);
+    background: var(--bg);
+    border-radius: 15px;
+    margin: auto;
+}
+.contain img{
+    position: relative;
+    left: calc(calc(var(--sixeX-contain) - 500px) / 2);
+    top: 40px;
+    border-radius: 25px;
+}
+.contain p{
+    color: var(--white-control);
+    position: relative;
+    top: 45px;
+}
+.button-move-songs{
+    width: 54px;
+    height: 54px;
+    background: var(--white-control-inactive);
+    border-radius: 50px;
+    display: flex;
+}
+.button-move-songs:hover{
+    background: var(--white-control);
+}
+.button-move-songs img{
+    margin: auto;
+    position: relative;
+    left: auto;
+    top: auto;
+}
+.controls{
+    position: relative;
+    left: calc(calc(var(--sixeX-contain) - 408px) / 2);
+    top: 65px;
+    display: flex;
+}

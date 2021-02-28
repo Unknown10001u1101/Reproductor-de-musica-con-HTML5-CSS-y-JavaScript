@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Musica</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/reproductor.js"></script>
+</head>
+<body>
+    <h1 style="color:white;"><center>Reproductor de Musica</center></h1>
+    <div id="music-playing-box">
+        <div class="border">
+            <div class="contain">
+                <img id="song-image" src="images/the-weeknd.jpg" alt="imagenes musica" width="500px">
+                <center>
+                    <div class="song-info">
+                        <p><span id="song-name" style="font-size: x-large; font-weight: bold;">Blinding Lights</span></p>
+                        <p><span id="song-artist">The Weeknd</span></p>
+                    </div>
+                </center>
+                <div class="controls">
+                    <div id="back" class="button-move-songs">
+                        <img src="images/volver.png" width="18px" alt="">
+                    </div>
+                    <audio id="audio" src="music/blinding-lights.mp3" controls></audio>
+                    <div id="next" class="button-move-songs">
+                        <img src="images/avanzar.png" width="18px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
