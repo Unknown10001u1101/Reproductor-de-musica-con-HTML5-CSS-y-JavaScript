@@ -3,8 +3,11 @@
     --sizeY-border: 800px;
     --sixeX-contain: 580px;
     --sizeY-contain: 780px;
+    --size-musics-box-w: 600px;
     --bg: #202020;
+    --dark-gray-border: #4d4d4d;
     --dark-gray: #5a5a5a;
+    --light-gray: #979797;
     --white: #f3f3f3;
     --white-control: #F0F0F0;
     --white-control-inactive: #D1D1D1;
@@ -21,6 +24,13 @@ body{
 }
 /*Diseño y Animación del borde gradiente*/
 .border{
+    width: var(--sizeX-border);
+    height: var(--sizeY-border);
+    background: var(--dark-gray);
+    border-radius: 15px;
+    display: flex;
+}
+.border-playing{
     width: var(--sizeX-border);
     height: var(--sizeY-border);
     background: linear-gradient(90deg, var(--dark-gray)10%, var(--white)50%, var(--dark-gray)90%);
@@ -82,4 +92,67 @@ body{
     left: calc(calc(var(--sixeX-contain) - 408px) / 2);
     top: 65px;
     display: flex;
+}
+
+#musics-box{
+    width: var(--size-musics-box-w);
+    margin: 30px auto;
+    display: grid;
+}
+#musics-box ul{
+    list-style: none;
+    padding: 0 0;
+}
+#musics-box li{
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin: 10px 0;
+}
+.box-music-border{
+    padding: 8px 8px;
+    border-radius: 10px;
+    background: var(--dark-gray-border);
+}
+.box-music-border:hover{
+    background: var(--light-gray);
+}
+.box-music-border-select{
+    padding: 8px 8px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--dark-gray)8%, var(--white-control)45%, var(--white-control)55%, var(--dark-gray)92%);
+
+    animation-name: gradientSelect;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes gradientSelect{
+    0%{
+        background-position: -15rem 0;
+    }
+    50%{
+        background-position: 15rem 0;
+    }
+    100%{
+        background-position: -15rem 0;
+    }
+}
+.box-music{
+    background-color: var(--bg);
+    padding: 5px 5px;
+    border-radius: 10px;
+    color: var(--white-control);
+    display: flex;
+}
+.box-music img{
+    border-radius: 10px;
+}
+.box-music-text{
+    margin: auto 0;
+}
+.box-music-text p{
+    margin: 0 2rem;
+}
+.box-music-text p span{
+    margin: 0 10px;
 }
